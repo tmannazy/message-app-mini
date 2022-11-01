@@ -3,3 +3,15 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  div(class="")
+    each val in messages
+      p #{val.text}
+      p #{val.user}
+      p #{val.added}
+  div
+    button(class='submitBtn')
+      a(href="/new") Add New Message
+
+
+
+
